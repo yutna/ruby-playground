@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "syntax_tree", "~> 6.2"
+gem 'rubocop', '~> 1.65', '>= 1.65.1'
