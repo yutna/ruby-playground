@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Transaction
   def initialize(account_a, account_b)
     @account_a = account_a

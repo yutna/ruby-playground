@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 class Account
   attr_accessor :balance
+
   # protected attr_reader :balance
 
   def initialize(balance)

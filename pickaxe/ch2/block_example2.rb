@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 def who_says_what
-  yield("Dave", "hello")
-  yield("Andy", "goodbye")
+  yield('Dave', 'hello')
+  yield('Andy', 'goodbye')
 end
 
 who_says_what { |person, phrase| puts "#{person} says #{phrase}" }

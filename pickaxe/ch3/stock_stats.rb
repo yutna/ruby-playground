@@ -1,8 +1,10 @@
-require_relative "csv_reader"
+# frozen_string_literal: true
+
+require_relative 'csv_reader'
 
 reader = CsvReader.new
 ARGV.each do |csv_file_name|
-  $stderr.puts "Processing #{csv_file_name}"
+  warn "Processing #{csv_file_name}"
   reader.read_in_csv_data(csv_file_name)
 end
 
