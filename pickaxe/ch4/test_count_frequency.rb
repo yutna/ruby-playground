@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
-require 'minitest/autorun'
-require_relative 'count_frequency'
+require "minitest/autorun"
+require_relative "count_frequency"
 
 class TestCountFrequency < Minitest::Test
   def test_empty_list
@@ -9,18 +7,18 @@ class TestCountFrequency < Minitest::Test
   end
 
   def test_single_word
-    assert_equal({ 'cat' => 1 }, count_frequency(['cat']))
+    assert_equal({ "cat" => 1 }, count_frequency(["cat"]))
   end
 
   def test_two_different_words
-    assert_equal({ 'cat' => 1, 'sat' => 1 }, count_frequency(%w[cat sat]))
+    assert_equal({ "cat" => 1, "sat" => 1 }, count_frequency(%w[cat sat]))
   end
 
   def test_two_words_with_adjacent_repeat
-    assert_equal({ 'cat' => 2, 'sat' => 1 }, count_frequency(%w[cat cat sat]))
+    assert_equal({ "cat" => 2, "sat" => 1 }, count_frequency(%w[cat cat sat]))
   end
 
   def test_two_words_with_non_adjacent_repeat
-    assert_equal({ 'cat' => 2, 'sat' => 1 }, count_frequency(%w[cat sat cat]))
+    assert_equal({ "cat" => 2, "sat" => 1 }, count_frequency(%w[cat sat cat]))
   end
 end

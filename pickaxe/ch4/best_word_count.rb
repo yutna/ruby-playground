@@ -10,5 +10,6 @@ word_list = words_from_string(raw_text)
 counts = word_list.tally
 sorted = counts.sort_by { |_word, count| count }
 top_five = sorted.last(5)
+top_five = top_five.reverse.map { |word, count| "#{word}: #{count}" }
 
-top_five.reverse_each { |word, count| puts "#{word}: #{count}" }
+puts top_five

@@ -6,9 +6,9 @@ raw_text =
 sounds like an array. Then, build a count for each distinct word. That sounds like a use for a hash---we can index it
 with the word and use the corresponding entry to keep a count."
 
-word_list = words_from_string(raw_text)
-counts = word_list.tally
-sorted = counts.sort_by { |_word, count| count }
-top_five = sorted.last(5)
-
-top_five.reverse_each { |word, count| puts "#{word}: #{count}" }
+puts words_from_string(raw_text)
+       .tally
+       .sort_by { |_word, count| count }
+       .last(5)
+       .reverse
+       .map { |word, count| "#{word} #{count}" }

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class BookInStock
   attr_accessor :price
   attr_reader :isbn
